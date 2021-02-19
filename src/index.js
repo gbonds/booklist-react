@@ -1,17 +1,46 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const allBooks = [
+  {
+    image: 'https://images-na.ssl-images-amazon.com/images/I/41EzNnr4YUL._AC_SX184_.jpg',
+    title: 'The Vanishing Half',
+    author: 'Brit Bennett'
+  },
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  {
+    image: 'https://images-na.ssl-images-amazon.com/images/I/512D7InYi7L._AC_SX184_.jpg',
+    title: 'The Four Winds',
+    author: 'Kristen Hannah'
+  }
+]
+
+// JUST TESTING, WILL UPDATE TO USE BOOK ARRAY
+const allNames = ['jon', 'nancy', 'bob']
+const newNames = allNames.map((name) => {
+  return <h1>{name}</h1>
+})
+
+const BookList = () => {
+  return (
+    <section className="BookList">
+      {allNames}
+    </section>
+  )
+}
+
+const Book = (props) => {
+
+  console.log(props)
+
+  return (
+    <article className="Book">
+      <img src={props.image} alt="" />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
+    </article>
+  )
+}
+
+ReactDom.render(<BookList />, document.getElementById('root'))
