@@ -10,6 +10,13 @@ body {
   color: rgb(34, 34, 34);
 }
 
+.Header {
+  color: white;
+  background-color: midnightblue;
+  padding: 2rem;
+  text-align: center;
+}
+
 .BookList {
   width: 90vw;
   max-width: 900px;
@@ -29,10 +36,10 @@ body {
   text-align: center;
 }
 
-.Book h1 {
+.Book h2 {
   margin-top: 0.5rem;
 }
 
-.Book h4 {
+.Book h3 {
   color: rgb(73, 73, 73);
 }
